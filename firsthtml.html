@@ -37,6 +37,24 @@
             display: block;
             margin: 0;
         }
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -120,6 +138,23 @@
         <p>
             Предпочтительно не дарить деньги другу – это слишком банально. Исключение можно сделать только по просьбе.
         </p>
+        <div class="flex-container">
+            <div class="card">
+                <h3>Настольная игра</h3>
+                <p>Хороший вариант для компании хороших друзей</p>
+            </div>
+
+            <div class="card">
+                <h3>Книга</h3>
+                <p>"Лучший подарок - это книга!"</p>
+            </div>
+
+            <div class="card">
+                <h3>Аксессуар</h3>
+                <p>Практичный подарок, но нужно знать предпочтения</p>
+            </div>
+        </div>
+
     </section>
 
     <section id="family">
@@ -162,15 +197,16 @@
             В этом могут помочь подарочные карты или сертификаты.
             Если вам нужно сделать подарок малознакомому человеку и у него есть вишлист, то смело пользуйтесь им.
         </p>
-        <p>
-            Немного примеров подарков для малознакомых людей:
-        </p>
-        <ul>
-            <li>Уютные вещи для дома</li>
-            <li>Наборы чая/кофе/сладостей</li>
-            <li>Билеты на концерт/квест/мастер-класс</li>
-            <li>Самодельные декоративные подарки</li>
-        </ul>
+
+        <div class="grid-container">
+            <div class="card">Сертификат</div>
+            <div class="card">Сладости</div>
+            <div class="card">Цветы</div>
+            <div class="card">Косметика</div>
+            <div class="card">Чай / кофе</div>
+            <div class="card">Свечи</div>
+        </div>
+
     </section>
 
     <footer>
