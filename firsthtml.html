@@ -124,6 +124,10 @@
             Данный гид призван помочь каждому, кто столкнётся с этой проблемой!
         </p>
         <img src="https://st.depositphotos.com/10614052/61551/i/450/depositphotos_615518880-stock-photo-many-hands-christmas-gifts-red.jpg">
+        <button onclick="showGift()">Случайный подарок</button>
+        <p id="gift">
+            Здесь появится идея для подарка, нажми кнопку сверху!
+        </p>
     </section>
 
     <section id="advice">
@@ -242,6 +246,23 @@
     <footer>
         <p>(с) 2026, Все права защищены... наверное...</p>
     </footer>
+
+    <script>
+        let gifts = ["Книга","Сладости","Свеча","Чай","Плед","Сервиз","Сертификат","Настольная игра"]//массив случайных подарков
+        let delay = 800//задержка в миллисекундах
+        let index = 0//для случайного индекса
+
+        //функция при нажатии кнопки
+        function showGift() {
+            let output = document.getElementById("gift")//находим элемент куда будем выводить результат
+            output.textContent = "Выбираем подарок..."//вывод текста
+            index = Math.floor(Math.random() * gifts.length)//случайных индекс от 0 до длины массива с подарками
+            setTimeout(function () {
+                let selectedGift = gifts[index]//сохраним выбранный подарок
+                output.textContent = "Идея: " + selectedGift
+            }, delay);
+        }
+    </script>
     
 </body>
 </html>
